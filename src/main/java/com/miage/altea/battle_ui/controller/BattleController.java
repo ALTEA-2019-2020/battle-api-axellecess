@@ -11,7 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class BattleController {
 
     @PostMapping(value = "/battles")
-    public ModelAndView createBattle(@RequestParam(value = "trainer", required = false) String trainer, @RequestParam(value = "opponent", required = false) String opponent){
+    public ModelAndView createBattle(@RequestParam(value = "trainer", required = false) String trainer,
+                                     @RequestParam(value = "opponent", required = false) String opponent){
         return null;
     }
 

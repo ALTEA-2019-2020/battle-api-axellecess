@@ -1,5 +1,6 @@
 package com.miage.altea.battle_ui.service;
 
+@Service
 public class StatsCalculator {
 
     public int calculateHp(int base, int level){

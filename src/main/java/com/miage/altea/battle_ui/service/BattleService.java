@@ -12,8 +12,8 @@ import org.springframework.web.client.RestTemplate;
 public class BattleService {
 
     public Battle createBattle(){
+        Battle battle = new Battle();
 
-
-        return  null;
+        return  battle;
     }
 }
