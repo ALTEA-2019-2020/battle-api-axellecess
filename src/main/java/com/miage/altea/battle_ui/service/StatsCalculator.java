@@ -1,5 +1,7 @@
 package com.miage.altea.battle_ui.service;
 
+import org.springframework.stereotype.Service;
+
 @Service
 public class StatsCalculator {
 

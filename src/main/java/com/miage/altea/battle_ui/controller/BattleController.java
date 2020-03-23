@@ -1,13 +1,11 @@
 package com.miage.altea.battle_ui.controller;
 
 import com.miage.altea.battle_ui.battle.Battle;
+import com.miage.altea.battle_ui.battle.BattleTrainer;
 import com.miage.altea.battle_ui.service.BattleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
@@ -29,17 +27,17 @@ public class BattleController {
 
     @GetMapping("/battles")
     public List<Battle> getBattles(){
-        return null;
+        return battleService.getBattles();
     }
 
     @GetMapping("/battles/{uuid}")
     public Battle getOneBattle(@PathVariable String uuid){
-        return null;
+        return battleService.getBattle(uuid);
     }
 
     @PostMapping("/battles/{uuid}/{trainerName}/attack")
     public Battle attack(@PathVariable String uuid, @PathVariable String trainerName){
-        return null;
+        return battleService.attack(uuid, trainerName);
     }
 
     @GetMapping("/fight/{opponent}")
