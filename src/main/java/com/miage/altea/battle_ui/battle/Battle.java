@@ -1,12 +1,7 @@
 package com.miage.altea.battle_ui.battle;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
 public class Battle {
 
-    @Id
     private String uuid;
     private BattleTrainer trainer;
     private BattleTrainer opponent;
