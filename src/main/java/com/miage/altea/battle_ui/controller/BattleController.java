@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.security.Principal;
+import java.util.List;
+
+@CrossOrigin
 @Controller
 public class BattleController {
 
@@ -17,24 +21,34 @@ public class BattleController {
     BattleService battleService;
 
     @PostMapping(value = "/battles")
-    public ModelAndView createBattle(@RequestParam(value = "trainer", required = false) String trainer,
+    public Battle createBattle(@RequestParam(value = "trainer", required = false) String trainer,
                                      @RequestParam(value = "opponent", required = false) String opponent){
         Battle battle = battleService.createBattle(trainer, opponent);
-        return null;
+        return battle;
     }
 
     @GetMapping("/battles")
-    public ModelAndView getBattles(){
+    public List<Battle> getBattles(){
         return null;
     }
 
     @GetMapping("/battles/{uuid}")
-    public ModelAndView getOneBattle(@PathVariable String uuid){
+    public Battle getOneBattle(@PathVariable String uuid){
         return null;
     }
 
     @PostMapping("/battles/{uuid}/{trainerName}/attack")
-    public ModelAndView attack(@PathVariable String uuid, @PathVariable String trainerName){
+    public Battle attack(@PathVariable String uuid, @PathVariable String trainerName){
         return null;
+    }
+
+    @GetMapping("/fight/{opponent}")
+    public ModelAndView fight(Principal principal, @PathVariable String opponent){
+        var modelAndView = new ModelAndView("fight");
+
+        modelAndView.addObject("trainerName", principal.getName());
+        modelAndView.addObject("opponentName", opponent);
+
+        return modelAndView;
     }
 }
