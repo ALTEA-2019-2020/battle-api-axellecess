@@ -9,10 +9,12 @@ import com.miage.altea.battle_ui.trainers.bo.Pokemon;
 import com.miage.altea.battle_ui.trainers.bo.Trainer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 
+@Service
 public class TrainerServiceImpl implements TrainerService {
 
     private RestTemplate restTemplate;

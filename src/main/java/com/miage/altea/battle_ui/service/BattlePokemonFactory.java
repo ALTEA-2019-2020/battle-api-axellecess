@@ -2,6 +2,8 @@ package com.miage.altea.battle_ui.service;
 
 import com.miage.altea.battle_ui.battle.BattlePokemon;
 import com.miage.altea.battle_ui.pokemonTypes.bo.PokemonType;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class BattlePokemonFactory {
