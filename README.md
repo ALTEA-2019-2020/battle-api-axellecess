@@ -1,8 +1,9 @@
 # Battle API
 ### Par Cess Axelle - M2 MIAGE FA
 
-Ce projet est pour la mise en place des des batailles entre trainers et pokémons avec une IHM.
-Il est déployé sur Heroku, accessible à ce lien : **https://battle-api-juwit-cess.herokuapp.com** 
+Ce projet est pour la mise en place des des batailles entre trainers et pokémons avec une IHM.   
+Il est déployé sur Heroku, accessible à ce lien : **https://battle-api-juwit-cess.herokuapp.com**   
+Et pour lancer une battle : **https://trainer-api-juwit-cess-ui.herokuapp.com/fight/{opponentName}**
 
 Il est aussi accessible localement au port **8082**.
 
